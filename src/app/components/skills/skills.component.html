@@ -1,0 +1,16 @@
+<section class="resume-section" id="experience">
+    <div class="resume-section-content" *ngIf="techSkills.length > 0">
+        <h2 class="mb-5">Technical Skills</h2>
+        <div *ngFor="let skillItem of techSkills; let i = index;" class="d-flex flex-column flex-md-row justify-content-between mb-2">
+            <div class="flex-grow-1">
+                <div class="subheading mb-3 text-primary"><strong>{{skillItem.name}}</strong></div>
+                <ul *ngIf="skillItem.skill.length > 0">
+                    <li *ngFor="let skill of skillItem.skill">
+                        <span>{{skill}}</span>
+                    </li>
+                </ul>
+                <span *ngIf="skillItem.id == 8 || skillItem.id == 9">and more...</span>
+            </div>
+        </div>
+    </div>
+</section>

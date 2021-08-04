@@ -1,0 +1,39 @@
+<section class="resume-section" id="experience">
+    <div class="resume-section-content" *ngIf="projectList.length > 0">
+        <h2 class="mb-5">Projects</h2>
+        <div *ngFor="let proj of projectList; let i = index;">
+            <p class="text-primary" style="text-align:right">
+                <strong>{{i+1}}. {{proj.name}} - {{proj.client}} ({{proj.country}})</strong>
+            </p>
+            <div class="flex-grow-1 mb-3">
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th>PROJECT NAME:</th>
+                        <td>{{proj.name}}</td>
+                    </tr>
+                    <tr>
+                        <th>PROJECT TYPE:</th>
+                        <td>{{proj.type}}</td>
+                    </tr>
+                    <tr>
+                        <th>CLIENT:</th>
+                        <td>{{proj.client}} <b>({{proj.country}})</b></td>
+                    </tr>
+                    <tr>
+                        <th>MY ROLE:</th>
+                        <td>{{proj.role}}</td>
+                    </tr>
+                    <tr>
+                        <th>TEAM SIZE:</th>
+                        <td>{{proj.size}}</td>
+                    </tr>
+                    <tr>
+                        <th>TECHNOLOGIES USED:</th>
+                        <td>{{proj.technologies}}</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</section>
